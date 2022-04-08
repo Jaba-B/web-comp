@@ -37,5 +37,10 @@ window.addEventListener('load', () => {
     emailBox.classList.add("added-section__email-box");
     emailInput.classList.add('added-section__email-input');
     emailBtn.classList.add('added-section__email-btn');
+
+    emailBtn.addEventListener('click', (enteredValue) => {
+        enteredValue.preventDefault();
+        console.log(enteredValue);
+    }, false)
 });
 
