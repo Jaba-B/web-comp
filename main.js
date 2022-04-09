@@ -42,5 +42,16 @@ window.addEventListener('load', () => {
         enteredValue.preventDefault();
         console.log(enteredValue);
     }, false)
+
+    const media = window.matchMedia('(max-width: 768px)');
+    if (media.matches) {
+        div.style.height = "300px";
+        div.style.marginTop = "60px";
+
+        emailBox.style.flexDirection = "column";
+        emailBox.style.justifyContent = "center";
+        emailBox.style.alignItems = "center";
+        emailBtn.style.marginTop = "30px";
+    }
 });
 
