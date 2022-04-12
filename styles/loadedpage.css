@@ -62,3 +62,20 @@
     border-radius: 18px;
     color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    .added-section__content {
+        height: 320px;
+        margin-top: 60px;
+    }
+    .added-section__email-box {
+        height: 120px;
+        width: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .added-section__email-btn {
+        height: 42px;
+    }
+} 
