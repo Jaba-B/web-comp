@@ -56,8 +56,8 @@
 }
 
 .added-section__email-btn {
-    width: 111px;
-    height: 36px;
+    min-width: 111px;
+    min-height: auto;
     background: #55C2D8;
     border-radius: 18px;
     color: white;
