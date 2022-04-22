@@ -29,4 +29,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin(),
     ],
+    devServer: {
+        static: {
+          directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 9000,
+    },
 }
