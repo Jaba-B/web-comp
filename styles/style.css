@@ -34,15 +34,17 @@ main {
 }
 
 .app-logo {
-  width: 64px;
-  height: 64px;
+  width: 63px;
+  height: 63px;
   object-fit: contain;
+  background-image: url(../assets/images/your-logo-here.png);
 }
 
 .app-logo--small {
   width: 20px;
   height: 20px;
   margin-right: 8px;
+  background-image: url(../assets/images/your-logo-footer.png);
 }
 
 .app-title {
