@@ -11,5 +11,10 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'indent': ['error', 2],
+    'quotes': ['error', double],
+    'guard-for-in': 'error',
+    'linebreak-style': ['error', unix],
+    'eqeqeq': 'error'
   },
 };
