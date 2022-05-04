@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/prefer-default-export */
 export const validator = setTimeout(()=> {
     let parent = document.getElementById('app-container');
     let btn = parent.children[4].children[0].children[2].children[1];

@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve",
-    "lint": "eslint"
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",

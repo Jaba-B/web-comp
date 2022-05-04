@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { SectionCreator } from "./join-us-section.js";
 import { validator } from "./src/email-validator.js";
 import './styles/style.css'
