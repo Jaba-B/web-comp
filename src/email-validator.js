@@ -31,5 +31,7 @@ export const validator = setTimeout(() => {
     } else {
       alert('false');
     }
+    const emailInput = document.querySelector('added-section__email-btn');
+    emailInput.style.display = 'none';
   }, false);
 }, 1000);
