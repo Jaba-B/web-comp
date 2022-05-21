@@ -35,3 +35,27 @@ export const validator = setTimeout(() => {
     emailInput.style.display = 'none';
   }, false);
 }, 1000);
+
+export function validate(email) {
+  const validEmailEndings = ['gmail.com', 'outlook.com', 'yandex.ru'];
+  const ending = email.substring(email.indexOf('@') + 1);
+  const start = email.substring(0, email.indexOf('@'));
+  if (ending === validEmailEndings[0] && start.length > 0
+            || ending === validEmailEndings[1] && start.length > 0
+            || ending === validEmailEndings[2] && start.length > 0) {
+    return true;
+  }
+  return false;
+}
+
+export function validateAsync(email) {
+  const validEmailEndings = ['gmail.com', 'outlook.com', 'yandex.ru'];
+  const ending = email.substring(email.indexOf('@') + 1);
+  return new Promise((res, rej) => {
+    if (ending === validEmailEndings[0] || ending === validEmailEndings[1] || ending === validEmailEndings[2]) {
+      res(true);
+    } else {
+      rej(false);
+    }
+  });
+}
