@@ -6,7 +6,8 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { expect } from 'chai';
-import { validator, validate, validateAsync } from '../email-validator.js';
+import { assert } from 'chai';
+import { validator, validate, validateAsync, validateWithThrow } from '../email-validator.js';
 
 // describe('simple test', () => {
 //   it('should return str', () => {
@@ -115,4 +116,37 @@ import { validator, validate, validateAsync } from '../email-validator.js';
 //     })
 //   })
 // });
+
+// describe('test validateWithThrow basic functionality', () => {
+//     it ('oop@mail.com should throw error', () => {
+//         assert.throws(function() { validateWithThrow('oops@mail.com') }, Error, 'email is invalid');
+//     })
+//     it('oops@yandex.com should return false', function ()  {
+//         assert.throws(function() { validateWithThrow('oops@yandex.com') }, Error, 'email is invalid');
+//     })
+//     it('oops@outlook.ru should return false', function ()  {
+//         assert.throws(function() { validateWithThrow('oops@outlook.ru') }, Error, 'email is invalid');
+//     })
+//     it('oops@gmail.ru should return false', function ()  {
+//         assert.throws(function() { validateWithThrow('oops@gmail.ru') }, Error, 'email is invalid');
+//     })
+//     it('oops@mail.ru should return false', function ()  {
+//         assert.throws(function() { validateWithThrow('oops@mail.ru') }, Error, 'email is invalid');
+//     })
+//     it('oops@outlook. should return false', function ()  {
+//         assert.throws(function() { validateWithThrow('oops@outlook.') }, Error, 'email is invalid');
+//     })
+//     it('oops@gmail.com should return true', function ()  {
+//         const result = validateWithThrow('oops@gmail.com')
+//         expect(result).to.equal(true)
+//     })
+//     it('oops@outlook.com should return true', function ()  {
+//         const result = validateWithThrow('oops@outlook.com')
+//         expect(result).to.equal(true)
+//     })
+//     it('oops@yandex.ru should return true', function ()  {
+//         const result = validateWithThrow('oops@yandex.ru')
+//         expect(result).to.equal(true)
+//     })
+// })
 

@@ -59,3 +59,13 @@ export function validateAsync(email) {
     }
   });
 }
+
+export function validateWithThrow(email) {
+  const validEmailEndings = ['gmail.com', 'outlook.com', 'yandex.ru'];
+  const ending = email.substring(email.indexOf('@') + 1);
+    if (ending === validEmailEndings[0] || ending === validEmailEndings[1] || ending === validEmailEndings[2]) {
+      return true;
+    } else {
+      throw Error('email is invalid');
+    };
+}
