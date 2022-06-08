@@ -63,9 +63,23 @@ export function validateAsync(email) {
 export function validateWithThrow(email) {
   const validEmailEndings = ['gmail.com', 'outlook.com', 'yandex.ru'];
   const ending = email.substring(email.indexOf('@') + 1);
-    if (ending === validEmailEndings[0] || ending === validEmailEndings[1] || ending === validEmailEndings[2]) {
-      return true;
-    } else {
-      throw Error('email is invalid');
-    };
+  if (ending === validEmailEndings[0] || ending === validEmailEndings[1] || ending === validEmailEndings[2]) {
+    return true;
+  } else {
+    throw Error('email is invalid');
+  };
+}
+
+export function validateWithLog(email) {
+  const validEmailEndings = ['gmail.com', 'outlook.com', 'yandex.ru'];
+  const ending = email.substring(email.indexOf('@') + 1);
+  const start = email.substring(0, email.indexOf('@'));
+  if (ending === validEmailEndings[0] && start.length > 0
+            || ending === validEmailEndings[1] && start.length > 0
+            || ending === validEmailEndings[2] && start.length > 0) {
+    console.log(email);
+    return true;
+  }
+  console.log(email);
+  return false;
 }

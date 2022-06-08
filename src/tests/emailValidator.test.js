@@ -7,7 +7,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { expect } from 'chai';
 import { assert } from 'chai';
-import { validator, validate, validateAsync, validateWithThrow } from '../email-validator.js';
+import  sinon  from 'sinon';
+import pkg from 'mocha-sinon';
+const {mochasinon} = pkg;
+import { validator, validate, validateAsync, validateWithThrow, validateWithLog } from '../email-validator.js';
 
 // describe('simple test', () => {
 //   it('should return str', () => {
@@ -150,3 +153,62 @@ import { validator, validate, validateAsync, validateWithThrow } from '../email-
 //     })
 // })
 
+
+describe('validateWithLog basic functionality', () => {
+  it('empty input value should return false', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('');
+    expect( console.log.calledWith('') ).to.be.true;
+    expect(validateWithLog('')).to.deep.equal(false)
+    stub.restore();
+  });
+  it('ops@gmail.com should return true', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('ops@gmail.com');
+    expect( console.log.calledWith('ops@gmail.com') ).to.be.true;
+    expect(validateWithLog('ops@gmail.com')).to.deep.equal(true)
+    stub.restore();
+  });
+  it('ops@outlook.com should return true', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('ops@outlook.com');
+    expect( console.log.calledWith('ops@outlook.com') ).to.be.true;
+    expect(validateWithLog('ops@outlook.com')).to.deep.equal(true);
+    stub.restore();
+  });
+  it('ops@yandex.ru should return true', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('ops@yandex.ru');
+    expect( console.log.calledWith('ops@yandex.ru') ).to.be.true;
+    expect(validateWithLog('ops@yandex.ru')).to.deep.equal(true);
+    stub.restore();
+  });
+  it('opsyandex.ru should return false', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('opsyandex.ru');
+    expect( console.log.calledWith('opsyandex.ru') ).to.be.true;
+    expect(validateWithLog('opsyandex.ru')).to.deep.equal(false);
+    stub.restore();
+  });
+  it('ops@outlook should return false', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('ops@outlook');
+    expect( console.log.calledWith('ops@outlook') ).to.be.true;
+    expect(validateWithLog('ops@outlook')).to.deep.equal(false);
+    stub.restore();
+  });
+  it('@outlook.com should return false', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('@outlook.com');
+    expect( console.log.calledWith('@outlook.com') ).to.be.true;
+    expect(validateWithLog('@outlook.com')).to.deep.equal(false);
+    stub.restore();
+  });
+  it('o@outlook.com should return false', async () => {
+    const stub = sinon.stub(console, 'log');
+    validateWithLog('o@outlook.com');
+    expect( console.log.calledWith('o@outlook.com') ).to.be.true;
+    expect(validateWithLog('o@outlook.com')).to.deep.equal(false);
+    stub.restore();
+  });
+});
