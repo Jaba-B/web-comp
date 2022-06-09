@@ -10,7 +10,8 @@
     "dev": "webpack serve",
     "lint": "eslint ./",
     "lint:fix": "eslint . --fix",
-    "test": "npx mocha \"src/tests/**/*.test.js\" --recursive --require @babel/register"
+    "test": "npx mocha \"src/tests/**/*.test.js\" --recursive --require @babel/register --exit",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run test"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@babel/register": "^7.17.7",
     "babel-loader": "^8.2.5",
     "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "eslint": "^8.14.0",
@@ -38,6 +40,7 @@
     "mini-css-extract-plugin": "^2.6.0",
     "mocha": "^10.0.0",
     "mocha-sinon": "^2.1.2",
+    "nyc": "^15.1.0",
     "sinon": "^14.0.0",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.1",
