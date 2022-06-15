@@ -11,7 +11,7 @@
     "lint": "eslint ./",
     "lint:fix": "eslint . --fix",
     "test": "npx mocha \"src/tests/**/*.test.js\" --recursive --require @babel/register --exit",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run test"
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --all --reporter=text npm run test"
   },
   "repository": {
     "type": "git",
