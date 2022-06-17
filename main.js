@@ -2,8 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/extensions */
 /* eslint-disable no-mixed-operators */
-// import { SectionCreator } from './join-us-section.js';
-// import { validator } from './src/email-validator.js';
+
 import './styles/style.css';
 
 const form = document.querySelector('added-section__email-box');

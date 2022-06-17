@@ -12,7 +12,7 @@ import { expect, assert } from 'chai';
 import sinon from 'sinon';
 import pkg from 'mocha-sinon';
 import {
-  validator, validate, validateAsync, validateWithThrow, validateWithLog,
+  validate, validateAsync, validateWithThrow, validateWithLog,
 } from '../email-validator.js';
 
 const { mochasinon } = pkg;
