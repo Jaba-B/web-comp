@@ -1,7 +1,8 @@
+/* eslint-disable linebreak-style */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, './main.js'),
@@ -34,11 +35,4 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
   ],
-  // devServer: {
-  //     static: {
-  //       directory: path.join(__dirname, 'dist'),
-  //     },
-  //     compress: true,
-  //     port: 9000,
-  // },
 };

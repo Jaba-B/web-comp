@@ -37,14 +37,14 @@ main {
   width: 63px;
   height: 63px;
   object-fit: contain;
-  background-image: url(../assets/images/your-logo-here.png);
+  background-image: url(../compressed/your-logo-here1.png);
 }
 
 .app-logo--small {
   width: 20px;
   height: 20px;
   margin-right: 8px;
-  background-image: url(../assets/images/your-logo-footer.png);
+  background-image: url(../compressed/your-logo-footer1.png);
 }
 
 .app-title {
@@ -172,7 +172,7 @@ main {
 }
 
 .app-section--image-peak {
-  background: linear-gradient(to top, rgba(65, 65, 65, .5), rgba(65, 65, 65, .5)), url(../assets/images/your-image-here.jpg) no-repeat center/cover;
+  background: linear-gradient(to top, rgba(65, 65, 65, .5), rgba(65, 65, 65, .5)), url(../compressed/your-image-here1.jpg) no-repeat center/cover;
   height: 800px;
   max-width: 100%;
   color: white;
@@ -196,7 +196,7 @@ main {
 }
 
 .app-section--image-culture {
-  background: linear-gradient(to top, rgba(65, 65, 65, .7), rgba(65, 65, 65, .7)), url(../assets/images/your-image.jpg) no-repeat center/cover;
+  background: linear-gradient(to top, rgba(65, 65, 65, .7), rgba(65, 65, 65, .7)), url(../compressed/your-image1.jpg) no-repeat center/cover;
   height: 698px;
   max-width: 100%;
   color: white;
